@@ -1,0 +1,47 @@
+.content {
+    width: 800px;
+    margin: 0 auto;
+}
+.phonebook-form__label {
+    display: inline-block;
+    width: 135px;
+}
+.phonebook-form__input-area {
+    margin: 5px;
+}
+.phonebook-form__input {
+    width: 200px;
+    padding: 2px 0 2px 4px;
+}
+.phonebook-form__select {
+    width: 208px;
+    padding: 2px;
+}
+.phonebook-form__msg-block {
+    padding: 5px;
+    min-height: 18px;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.phonebook__row__item {
+    width: 12%;
+}
+.phonebook {
+    margin-top: 20px;
+    padding: 5px;
+}
+.phonebook__row {
+    margin: 7px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.phonebook__delete-record {
+    margin-right: 15px;
+}
+.phonebook__body {
+    font-size: 12px;
+}

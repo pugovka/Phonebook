@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery_ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery_ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="jquery_ui/jquery-ui.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Телефонный справочник</title>
+    <meta name="description" content="Список записей телефонного справочника">
+</head>
+
+<body>
+<div class="content">
+    <h1>Добавить пользователя в телефонный справочник</h1>
+    <div class="phonebook-form__msg-block"></div>
+    <form method="post" action="create_user_data.php" class="phonebook-form" accept-charset="utf-8">
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Фамилия:</label>
+            <input type="text" name="person_data[last_name]" class="phonebook-form__input" required maxlength="25">
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Имя:</label>
+            <input type="text" name="person_data[first_name]" class="phonebook-form__input" maxlength="25">
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Отчество:</label>
+            <input type="text" name="person_data[second_name]" class="phonebook-form__input" maxlength="25">
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Город:</label>
+            <input type="text" id="cities_input" class="phonebook-form__input" maxlength="25">
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Улица:</label>
+            <select name="person_data[street_id]" class="phonebook-form__street-select phonebook-form__select">
+                <option>Выберите улицу</option>
+            </select>
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Дата рождения:</label>
+            <input type="text" name="person_data[birth_date]" id="datepicker" class="phonebook-form__input" maxlength="25">
+        </div>
+        <div class="phonebook-form__input-area">
+            <label class="phonebook-form__label">Телефон:</label>
+            <input type="text" name="person_data[phone_number]"
+                   class="phonebook-form__input phonebook-form__phone-input"
+                   placeholder="+7 ___ ___-__-__" required>
+        </div>
+        <div>
+            <input type="submit" value="Добавить" name="add_record" class="phonebook-form__submit">
+        </div>
+    </form>
+    <div class="phonebook">
+        <div class="phonebook__row phonebook__row--headers">
+            <div class="phonebook__row__item">Фамилия</div>
+            <div class="phonebook__row__item">Имя</div>
+            <div class="phonebook__row__item">Отчество</div>
+            <div class="phonebook__row__item">Город</div>
+            <div class="phonebook__row__item">Улица</div>
+            <div class="phonebook__row__item">Дата рождения</div>
+            <div class="phonebook__row__item">Телефон</div>
+            <div class="phonebook__row__item">Действия</div>
+        </div>
+        <div class="phonebook__body"></div>
+    </div>
+</div>
+</body>
+</html>
